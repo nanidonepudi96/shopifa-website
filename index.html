@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shopifya — Discover More. Shop Better. Shop electronics, fashion, footwear, watches, and accessories with exclusive deals.">
+  <title>Shopifya | Discover More. Shop Better.</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Free Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Main Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Top Announcement Strip -->
+  <div class="promo-strip">
+    <div class="container promo-strip-inner">
+      <span><strong>Discover More. Shop Better.</strong> &bull; Free Shipping on orders over $49</span>
+      <a href="#offers">View Flash Deals &rarr;</a>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       1. NAVIGATION BAR
+       ========================================================= -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand" aria-label="Shopifya Home">
+        <img src="assets/icons/shopifya-logo.svg" alt="Shopifya Logo" width="38" height="38">
+        <div class="brand-copy">
+          <span class="brand-name">Shopifya</span>
+          <small class="brand-tag">Discover More. Shop Better.</small>
+        </div>
+      </a>
+
+      <!-- Mobile Menu Toggle (Pure CSS fallback + JS sync) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#new-arrivals" class="nav-link">New Arrivals</a></li>
+          <li><a href="#offers" class="nav-link">Offers</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-utilities">
+          <button type="button" id="search-toggle-btn" class="icon-btn" aria-label="Search products" title="Search Products">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
+
+          <a href="#shop" class="icon-btn" id="wishlist-nav-btn" aria-label="Wishlist" title="Saved Wishlist">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <span class="icon-badge" id="wishlist-count">0</span>
+          </a>
+
+          <button type="button" id="cart-open-btn" class="icon-btn" aria-label="Shopping Cart" title="Open Cart">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <span class="icon-badge badge-orange" id="cart-count">0</span>
+          </button>
+
+          <a href="#login-modal" class="btn btn-primary btn-sm">Login</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Collapsible Search Bar -->
+    <div id="search-bar-panel" class="search-bar-panel" hidden>
+      <div class="container search-bar-inner">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input
+          type="search"
+          id="product-search-input"
+          placeholder="Search headphones, laptop, sneakers, watches..."
+          aria-label="Search featured products"
+        >
+        <button type="button" id="clear-search-btn" class="btn btn-outline btn-sm">Clear</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =========================================================
+         2. HERO SECTION
+         ========================================================= -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-discount-badge">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span>MEGA SEASON SALE &bull; UP TO 50% OFF</span>
+          </div>
+
+          <h1 class="hero-title">Everything You Love, All in One Place.</h1>
+
+          <p class="hero-subtitle">
+            Discover amazing products, exclusive deals and a better shopping experience.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-accent btn-lg">
+              <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+              <span>Shop Now</span>
+            </a>
+            <a href="#categories" class="btn btn-ghost-light btn-lg">
+              <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+              <span>Explore Collections</span>
+            </a>
+          </div>
+
+          <div class="hero-trust-row">
+            <div><strong>25,000+</strong><span>Happy Shoppers</span></div>
+            <div><strong>500+</strong><span>Curated Products</span></div>
+            <div><strong>14 Days</strong><span>Easy Returns</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="assets/images/hero-shopping.png"
+            alt="Shopifya promotional shopping showcase featuring headphones, smart watches, and seasonal discounts"
+            class="hero-banner-img"
+            width="600"
+            height="450"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. PRODUCT CATEGORIES SECTION (8 Categories)
+         ========================================================= -->
+    <section id="categories" class="section section-grey">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Shop By Category</span>
+          <h2 class="section-title">Explore Popular Collections</h2>
+          <p class="section-subtitle">
+            Find curated electronics, everyday apparel, footwear, and lifestyle essentials across eight top departments.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <a href="#shop" class="card category-card">
+            <span class="cat-icon icon-blue"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span>
+            <h3>Electronics</h3>
+            <small>120+ Items</small>
+          </a>
+
+          <a href="#shop" class="card category-card">
+            <span class="cat-icon icon-orange"><i class="fa-solid fa-shirt" aria-hidden="true"></i></span>
+            <h3>Fashion</h3>
+            <small>210+ Items</small>
+          </a>
+
+          <a href="#shop" class="card category-card">
+            <span class="cat-icon icon-navy"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></span>
+            <h3>Men&apos;s Clothing</h3>
+            <small>95+ Items</small>
+          </a>
+
+          <a href="#shop" class="card category-card">
+            <span class="cat-icon icon-pink"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></span>
+            <h3>Women&apos;s Clothing</h3>
+            <small>130+ Items</small>
+          </a>
+
+          <a href="#shop" class="card category-card">
+            <span class="cat-icon icon-cyan"><i class="fa-solid fa-shoe-prints" aria-hidden="true"></i></span>
+            <h3>Shoes</h3>
+            <small>75+ Items</small>
+          </a>
+
+          <a href="#shop" class="card category-card">
+            <span class="cat-icon icon-amber"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+            <h3>Watches</h3>
+            <small>60+ Items</small>
+          </a>
+
+          <a href="#shop" class="card category-card">
+            <span class="cat-icon icon-emerald"><i class="fa-solid fa-couch" aria-hidden="true"></i></span>
+            <h3>Home &amp; Living</h3>
+            <small>88+ Items</small>
+          </a>
+
+          <a href="#shop" class="card category-card">
+            <span class="cat-icon icon-purple"><i class="fa-solid fa-glasses" aria-hidden="true"></i></span>
+            <h3>Accessories</h3>
+            <small>110+ Items</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. FEATURED PRODUCTS SECTION (12 Products)
+         ========================================================= -->
+    <section id="shop" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Catalog</span>
+          <h2 class="section-title">Trending Products Picked For You</h2>
+          <p class="section-subtitle">
+            Quality everyday tech, footwear, and fashion at student-friendly seasonal discounts.
+          </p>
+        </div>
+
+        <p id="search-status" class="search-status" hidden></p>
+
+        <div class="products-grid" id="featured-products-grid">
+          <!-- 1. Wireless Headphones -->
+          <article class="card product-card" data-title="Wireless Headphones" data-category="electronics audio">
+            <div class="product-media">
+              <img src="assets/images/product-headphones.png" alt="Wireless Headphones" width="400" height="325">
+              <span class="product-badge badge-sale">SALE</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Wireless Headphones to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 <span>(340)</span></div>
+              <h3 class="product-title">Wireless Headphones</h3>
+              <div class="price-row">
+                <strong class="price-now">$89</strong>
+                <span class="price-old">$149</span>
+                <span class="discount-pill">-40%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Wireless Headphones" data-price="89">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 2. Smart Watch -->
+          <article class="card product-card" data-title="Smart Watch" data-category="watches electronics">
+            <div class="product-media">
+              <img src="assets/images/product-smartwatch.png" alt="Smart Watch" width="400" height="325">
+              <span class="product-badge badge-new">NEW</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Smart Watch to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 <span>(215)</span></div>
+              <h3 class="product-title">Smart Watch</h3>
+              <div class="price-row">
+                <strong class="price-now">$119</strong>
+                <span class="price-old">$189</span>
+                <span class="discount-pill">-37%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Smart Watch" data-price="119">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 3. Running Shoes -->
+          <article class="card product-card" data-title="Running Shoes" data-category="shoes fashion">
+            <div class="product-media">
+              <img src="assets/images/product-shoes.png" alt="Running Shoes" width="400" height="325">
+              <span class="product-badge badge-sale">SALE</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Running Shoes to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 <span>(190)</span></div>
+              <h3 class="product-title">Running Shoes</h3>
+              <div class="price-row">
+                <strong class="price-now">$74</strong>
+                <span class="price-old">$115</span>
+                <span class="discount-pill">-36%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Running Shoes" data-price="74">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 4. Casual T-Shirt -->
+          <article class="card product-card" data-title="Casual T-Shirt" data-category="fashion mens clothing">
+            <div class="product-media">
+              <img src="assets/images/product-tshirt.png" alt="Casual T-Shirt" width="400" height="325">
+              <span class="product-badge badge-sale">-42%</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Casual T-Shirt to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.7 <span>(410)</span></div>
+              <h3 class="product-title">Casual T-Shirt</h3>
+              <div class="price-row">
+                <strong class="price-now">$22</strong>
+                <span class="price-old">$38</span>
+                <span class="discount-pill">-42%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Casual T-Shirt" data-price="22">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 5. Laptop -->
+          <article class="card product-card" data-title="Laptop" data-category="electronics computers">
+            <div class="product-media">
+              <img src="assets/images/product-laptop.png" alt="Laptop" width="400" height="325">
+              <span class="product-badge badge-sale">SALE</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Laptop to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 <span>(128)</span></div>
+              <h3 class="product-title">Laptop</h3>
+              <div class="price-row">
+                <strong class="price-now">$799</strong>
+                <span class="price-old">$1,099</span>
+                <span class="discount-pill">-27%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Laptop" data-price="799">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 6. Smartphone -->
+          <article class="card product-card" data-title="Smartphone" data-category="electronics mobile">
+            <div class="product-media">
+              <img src="assets/images/product-smartphone.png" alt="Smartphone" width="400" height="325">
+              <span class="product-badge badge-new">NEW</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Smartphone to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 <span>(276)</span></div>
+              <h3 class="product-title">Smartphone</h3>
+              <div class="price-row">
+                <strong class="price-now">$549</strong>
+                <span class="price-old">$749</span>
+                <span class="discount-pill">-27%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Smartphone" data-price="549">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 7. Backpack -->
+          <article class="card product-card" data-title="Backpack" data-category="accessories fashion">
+            <div class="product-media">
+              <img src="assets/images/product-backpack.png" alt="Backpack" width="400" height="325">
+              <span class="product-badge badge-sale">SALE</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Backpack to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 <span>(185)</span></div>
+              <h3 class="product-title">Backpack</h3>
+              <div class="price-row">
+                <strong class="price-now">$45</strong>
+                <span class="price-old">$75</span>
+                <span class="discount-pill">-40%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Backpack" data-price="45">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 8. Sunglasses -->
+          <article class="card product-card" data-title="Sunglasses" data-category="accessories fashion">
+            <div class="product-media">
+              <img src="assets/images/product-sunglasses.png" alt="Sunglasses" width="400" height="325">
+              <span class="product-badge badge-sale">-46%</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Sunglasses to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.6 <span>(142)</span></div>
+              <h3 class="product-title">Sunglasses</h3>
+              <div class="price-row">
+                <strong class="price-now">$29</strong>
+                <span class="price-old">$54</span>
+                <span class="discount-pill">-46%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Sunglasses" data-price="29">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 9. Bluetooth Speaker -->
+          <article class="card product-card" data-title="Bluetooth Speaker" data-category="electronics audio">
+            <div class="product-media">
+              <img src="assets/images/product-speaker.png" alt="Bluetooth Speaker" width="400" height="325">
+              <span class="product-badge badge-new">NEW</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Bluetooth Speaker to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 <span>(204)</span></div>
+              <h3 class="product-title">Bluetooth Speaker</h3>
+              <div class="price-row">
+                <strong class="price-now">$59</strong>
+                <span class="price-old">$99</span>
+                <span class="discount-pill">-40%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Bluetooth Speaker" data-price="59">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 10. Digital Watch -->
+          <article class="card product-card" data-title="Digital Watch" data-category="watches accessories">
+            <div class="product-media">
+              <img src="assets/images/product-digitalwatch.png" alt="Digital Watch" width="400" height="325">
+              <span class="product-badge badge-sale">SALE</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Digital Watch to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.7 <span>(167)</span></div>
+              <h3 class="product-title">Digital Watch</h3>
+              <div class="price-row">
+                <strong class="price-now">$39</strong>
+                <span class="price-old">$69</span>
+                <span class="discount-pill">-43%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Digital Watch" data-price="39">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 11. Fashion Handbag -->
+          <article class="card product-card" data-title="Fashion Handbag" data-category="womens fashion accessories">
+            <div class="product-media">
+              <img src="assets/images/product-handbag.png" alt="Fashion Handbag" width="400" height="325">
+              <span class="product-badge badge-new">NEW</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Fashion Handbag to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 <span>(231)</span></div>
+              <h3 class="product-title">Fashion Handbag</h3>
+              <div class="price-row">
+                <strong class="price-now">$68</strong>
+                <span class="price-old">$110</span>
+                <span class="discount-pill">-38%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Fashion Handbag" data-price="68">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- 12. Sneakers -->
+          <article class="card product-card" data-title="Sneakers" data-category="shoes fashion">
+            <div class="product-media">
+              <img src="assets/images/product-sneakers.png" alt="Sneakers" width="400" height="325">
+              <span class="product-badge badge-sale">SALE</span>
+              <button type="button" class="wishlist-btn" aria-label="Add Sneakers to wishlist">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 <span>(318)</span></div>
+              <h3 class="product-title">Sneakers</h3>
+              <div class="price-row">
+                <strong class="price-now">$64</strong>
+                <span class="price-old">$98</span>
+                <span class="discount-pill">-35%</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Sneakers" data-price="64">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Add to Cart
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. SPECIAL OFFERS SECTION
+         ========================================================= -->
+    <section id="offers" class="section section-navy">
+      <div class="container">
+        <div class="section-header header-light">
+          <span class="section-tag tag-orange">Limited-Time Deals</span>
+          <h2 class="section-title">Special Deals Just for You</h2>
+          <p class="section-subtitle">
+            Grab exclusive flash markdowns on electronics, footwear, and daily essentials before the timer runs out.
+          </p>
+        </div>
+
+        <div class="offers-grid">
+          <article class="offer-banner offer-blue">
+            <div class="offer-copy">
+              <span class="offer-chip">FLASH OFFER &bull; ENDS IN 12H</span>
+              <h3>Tech &amp; Audio Mega Drop</h3>
+              <p>Up to <strong>40% OFF</strong> on Wireless Headphones, Smart Watches &amp; Bluetooth Speakers.</p>
+              <a href="#shop" class="btn btn-accent">Shop Now</a>
+            </div>
+            <img src="assets/images/product-headphones.png" alt="Headphones Deal" width="220" height="180">
+          </article>
+
+          <article class="offer-banner offer-orange">
+            <div class="offer-copy">
+              <span class="offer-chip chip-dark">WEEKEND STYLE DEAL</span>
+              <h3>Footwear &amp; Streetwear</h3>
+              <p>Flat <strong>35% OFF</strong> on Running Shoes, Sneakers, Backpacks &amp; Everyday Tees.</p>
+              <a href="#shop" class="btn btn-navy">Shop Now</a>
+            </div>
+            <img src="assets/images/product-sneakers.png" alt="Sneakers Deal" width="220" height="180">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. NEW ARRIVALS SECTION (4 New Products)
+         ========================================================= -->
+    <section id="new-arrivals" class="section section-grey">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fresh Drops</span>
+          <h2 class="section-title">New Arrivals This Week</h2>
+          <p class="section-subtitle">
+            Just landed on Shopifya—explore our latest audio, apparel, and workspace upgrades.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <article class="card product-card">
+            <div class="product-media">
+              <img src="assets/images/new-earbuds.png" alt="Noise-Canceling Earbuds" width="400" height="325">
+              <span class="product-badge badge-new">NEW</span>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 <span>(58)</span></div>
+              <h3 class="product-title">Noise-Canceling Earbuds</h3>
+              <div class="price-row"><strong class="price-now">$69</strong><span class="price-old">$99</span><span class="discount-pill">-30%</span></div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Noise-Canceling Earbuds" data-price="69">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="product-media">
+              <img src="assets/images/new-jacket.png" alt="Urban Bomber Jacket" width="400" height="325">
+              <span class="product-badge badge-new">NEW</span>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 <span>(42)</span></div>
+              <h3 class="product-title">Urban Bomber Jacket</h3>
+              <div class="price-row"><strong class="price-now">$79</strong><span class="price-old">$119</span><span class="discount-pill">-34%</span></div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Urban Bomber Jacket" data-price="79">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="product-media">
+              <img src="assets/images/new-lamp.png" alt="Minimalist Desk Lamp" width="400" height="325">
+              <span class="product-badge badge-new">NEW</span>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 <span>(64)</span></div>
+              <h3 class="product-title">Minimalist Desk Lamp</h3>
+              <div class="price-row"><strong class="price-now">$38</strong><span class="price-old">$58</span><span class="discount-pill">-34%</span></div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Minimalist Desk Lamp" data-price="38">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="product-media">
+              <img src="assets/images/new-keyboard.png" alt="Mechanical Keyboard" width="400" height="325">
+              <span class="product-badge badge-new">NEW</span>
+            </div>
+            <div class="product-body">
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 5.0 <span>(91)</span></div>
+              <h3 class="product-title">Mechanical Keyboard</h3>
+              <div class="price-row"><strong class="price-now">$85</strong><span class="price-old">$125</span><span class="discount-pill">-32%</span></div>
+              <button type="button" class="btn btn-primary btn-full add-cart-btn" data-name="Mechanical Keyboard" data-price="85">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. BEST SELLING PRODUCTS SECTION
+         ========================================================= -->
+    <section id="best-sellers" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Most Popular</span>
+          <h2 class="section-title">Best Selling Products</h2>
+          <p class="section-subtitle">
+            Customer favorites loved for durability, value, and everyday style.
+          </p>
+        </div>
+
+        <div class="bestsellers-grid">
+          <article class="card bestseller-card">
+            <img src="assets/images/product-headphones.png" alt="Wireless Headphones" width="130" height="106">
+            <div class="bestseller-info">
+              <span class="sold-tag">4,200+ Sold</span>
+              <h3>Wireless Headphones</h3>
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 Rating</div>
+              <div class="bestseller-bottom">
+                <strong>$89</strong>
+                <button type="button" class="btn btn-outline btn-sm add-cart-btn" data-name="Wireless Headphones" data-price="89">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card bestseller-card">
+            <img src="assets/images/product-smartwatch.png" alt="Smart Watch" width="130" height="106">
+            <div class="bestseller-info">
+              <span class="sold-tag">3,650+ Sold</span>
+              <h3>Smart Watch</h3>
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 Rating</div>
+              <div class="bestseller-bottom">
+                <strong>$119</strong>
+                <button type="button" class="btn btn-outline btn-sm add-cart-btn" data-name="Smart Watch" data-price="119">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card bestseller-card">
+            <img src="assets/images/product-sneakers.png" alt="Sneakers" width="130" height="106">
+            <div class="bestseller-info">
+              <span class="sold-tag">3,100+ Sold</span>
+              <h3>Sneakers</h3>
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 Rating</div>
+              <div class="bestseller-bottom">
+                <strong>$64</strong>
+                <button type="button" class="btn btn-outline btn-sm add-cart-btn" data-name="Sneakers" data-price="64">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card bestseller-card">
+            <img src="assets/images/product-backpack.png" alt="Backpack" width="130" height="106">
+            <div class="bestseller-info">
+              <span class="sold-tag">2,850+ Sold</span>
+              <h3>Backpack</h3>
+              <div class="product-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 Rating</div>
+              <div class="bestseller-bottom">
+                <strong>$45</strong>
+                <button type="button" class="btn btn-outline btn-sm add-cart-btn" data-name="Backpack" data-price="45">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. WHY SHOP WITH US SECTION (6 Features)
+         ========================================================= -->
+    <section id="why-us" class="section section-grey">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why Shop With Us</span>
+          <h2 class="section-title">The Shopifya Shopping Advantage</h2>
+          <p class="section-subtitle">
+            Built around speed, trust, transparent pricing, and 24/7 customer care.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="card feature-card">
+            <div class="feature-icon icon-blue"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div>
+            <h3>Free Shipping</h3>
+            <p>Complimentary doorstep delivery on all qualifying orders with real-time order tracking.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon icon-orange"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
+            <h3>Secure Shopping</h3>
+            <p>Encrypted checkout UI standards and verified seller listings for complete peace of mind.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon icon-emerald"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></div>
+            <h3>Easy Returns</h3>
+            <p>Simple 14-day return and size-exchange policy with zero unnecessary delays.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon icon-purple"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+            <h3>24/7 Customer Support</h3>
+            <p>Friendly support team ready day and night to help with sizing, shipping, or queries.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon icon-navy"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
+            <h3>Quality Products</h3>
+            <p>Handpicked electronics, fabrics, and accessories checked for durability before shipping.</p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon icon-amber"><i class="fa-solid fa-tags" aria-hidden="true"></i></div>
+            <h3>Best Prices</h3>
+            <p>Direct seasonal discounts and bundle deals so you always get more value for your budget.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. CUSTOMER REVIEWS SECTION (4 Reviews)
+         ========================================================= -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Customer Reviews</span>
+          <h2 class="section-title">Loved By Shoppers Everywhere</h2>
+          <p class="section-subtitle">
+            See what verified buyers say about product quality, packaging, and delivery speed.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="card review-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <p>&ldquo;The Wireless Headphones arrived in two days with crystal-clear sound and super comfortable ear cushions.&rdquo;</p>
+            <div class="reviewer">
+              <img src="assets/images/customer-1.png" alt="Rahul Verma" width="50" height="50">
+              <div><strong>Rahul Verma</strong><span>Purchased: Wireless Headphones</span></div>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <p>&ldquo;Great build quality on the Fashion Handbag! Looks super sleek and matches my college and office outfits.&rdquo;</p>
+            <div class="reviewer">
+              <img src="assets/images/customer-2.png" alt="Sneha Nair" width="50" height="50">
+              <div><strong>Sneha Nair</strong><span>Purchased: Fashion Handbag</span></div>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+            </div>
+            <p>&ldquo;The Sneakers are lightweight, well-cushioned, and the 35% weekend offer made them an unbeatable deal.&rdquo;</p>
+            <div class="reviewer">
+              <img src="assets/images/customer-3.png" alt="Arjun Patel" width="50" height="50">
+              <div><strong>Arjun Patel</strong><span>Purchased: Sneakers</span></div>
+            </div>
+          </article>
+
+          <article class="card review-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <p>&ldquo;Bought the Smart Watch and Backpack for campus—battery life is awesome and support answered my question fast.&rdquo;</p>
+            <div class="reviewer">
+              <img src="assets/images/customer-4.png" alt="Kavya Reddy" width="50" height="50">
+              <div><strong>Kavya Reddy</strong><span>Purchased: Smart Watch</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         10. NEWSLETTER SUBSCRIPTION SECTION
+         ========================================================= -->
+    <section id="newsletter" class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-copy">
+            <span class="newsletter-tag">VIP Deals Club</span>
+            <h2>Get Exclusive Offers in Your Inbox</h2>
+            <p>Subscribe for early flash-sale alerts, new product drops, and an instant 10% welcome discount code.</p>
+          </div>
+          <form class="newsletter-form" id="newsletter-form">
+            <label for="newsletter-email" class="sr-only">Email Address</label>
+            <input type="email" id="newsletter-email" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn btn-accent">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         11. ABOUT US SECTION
+         ========================================================= -->
+    <section id="about" class="section section-grey">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <img src="assets/images/about-store.png" alt="About Shopifya digital retail storefront promise" width="600" height="425">
+        </div>
+        <div class="about-content">
+          <span class="section-tag">About Shopifya</span>
+          <h2 class="section-title">Customer Satisfaction &amp; Quality at Honest Prices</h2>
+          <p>
+            At <strong>Shopifya</strong>, our mission is simple: <em>Discover More. Shop Better.</em>
+            We bring together reliable electronics, stylish everyday clothing, footwear, watches, and
+            accessories in one clean, distraction-free shopping destination.
+          </p>
+          <p>
+            Every item in our catalog is vetted for quality and priced transparently so students,
+            professionals, and families can shop confidently without overpaying.
+          </p>
+          <div class="about-badges">
+            <div><img src="assets/icons/free-shipping.svg" alt="" width="38" height="38"><span>Fast Free Delivery</span></div>
+            <div><img src="assets/icons/secure-pay.svg" alt="" width="38" height="38"><span>Quality Guaranteed</span></div>
+          </div>
+          <a href="#shop" class="btn btn-primary">Explore All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         12. CONTACT SECTION
+         ========================================================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Customer Care</span>
+          <h2 class="section-title">Contact Shopifya Support</h2>
+          <p class="section-subtitle">
+            Have a question about an item, bulk order, or return? Send us a message anytime.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <aside class="card contact-info">
+            <h3>Store Information</h3>
+            <p>Our customer support specialists are available 24/7 to assist you.</p>
+            <div class="contact-list">
+              <a href="mailto:care@shopifya.store" class="contact-row">
+                <span class="contact-ico"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                <div><small>Email</small><strong>care@shopifya.store</strong></div>
+              </a>
+              <div class="contact-row">
+                <span class="contact-ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                <div><small>Helpline</small><strong>+91 98765 11223</strong></div>
+              </div>
+              <div class="contact-row">
+                <span class="contact-ico"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                <div><small>Headquarters</small><strong>Hyderabad &amp; Bengaluru, India</strong></div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="card contact-form-card">
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="c-name">Full Name</label>
+                  <input type="text" id="c-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="c-email">Email Address</label>
+                  <input type="email" id="c-email" placeholder="you@example.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="c-subject">Subject</label>
+                <input type="text" id="c-subject" placeholder="Product inquiry / Delivery question" required>
+              </div>
+              <div class="form-group">
+                <label for="c-msg">Message</label>
+                <textarea id="c-msg" rows="5" placeholder="Write your message..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       13. FOOTER SECTION
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand footer-logo">
+            <img src="assets/icons/shopifya-logo.svg" alt="Shopifya Logo" width="38" height="38">
+            <div class="brand-copy">
+              <span class="brand-name">Shopifya</span>
+              <small class="brand-tag">Discover More. Shop Better.</small>
+            </div>
+          </a>
+          <p>
+            Your trusted modern online marketplace for curated electronics, apparel, footwear,
+            watches, and everyday lifestyle essentials.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#offers">Special Offers</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product Categories</h4>
+          <ul>
+            <li><a href="#categories">Electronics</a></li>
+            <li><a href="#categories">Fashion &amp; Clothing</a></li>
+            <li><a href="#categories">Shoes &amp; Sneakers</a></li>
+            <li><a href="#categories">Watches</a></li>
+            <li><a href="#categories">Home &amp; Living</a></li>
+            <li><a href="#categories">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#why-us">Free Shipping Policy</a></li>
+            <li><a href="#why-us">14-Day Easy Returns</a></li>
+            <li><a href="#reviews">Verified Reviews</a></li>
+            <li><a href="mailto:care@shopifya.store">care@shopifya.store</a></li>
+            <li><span>+91 98765 11223</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Shopifya Online Store. All Rights Reserved. (College UI/UX Project Demo)</p>
+        <a href="#home" class="back-top">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       INTERACTIVE CART DRAWER & TOAST NOTIFICATION
+       ========================================================= -->
+  <aside id="cart-drawer" class="cart-drawer" aria-label="Shopping Cart" hidden>
+    <div class="cart-backdrop" id="cart-backdrop"></div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>Your Shopping Cart</h3>
+        <button type="button" id="cart-close-btn" class="modal-close" aria-label="Close Cart">&times;</button>
+      </div>
+      <div class="cart-items" id="cart-items-list">
+        <p class="cart-empty">Your cart is empty. Click &ldquo;Add to Cart&rdquo; on any product!</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Estimated Subtotal</span>
+          <strong id="cart-total-price">$0</strong>
+        </div>
+        <p class="demo-note">Frontend UI demo only — no real payments or orders are processed.</p>
+        <button type="button" id="clear-cart-btn" class="btn btn-outline btn-full">Clear Cart</button>
+      </div>
+    </div>
+  </aside>
+
+  <div id="toast-msg" class="toast-msg" role="status" aria-live="polite" hidden></div>
+
+  <!-- Pure-CSS Login Modal -->
+  <div id="login-modal" class="css-modal" role="dialog" aria-labelledby="login-title">
+    <a href="#home" class="modal-backdrop" aria-label="Close modal"></a>
+    <div class="modal-card">
+      <a href="#home" class="modal-close" aria-label="Close Login Modal">&times;</a>
+      <h3 id="login-title">Sign In to Shopifya</h3>
+      <p>Access your saved wishlist, seasonal coupons, and order tracking preferences.</p>
+      <form class="modal-form" action="#home" method="get">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" placeholder="shopper@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="login-pass">Password</label>
+          <input type="password" id="login-pass" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Separate Beginner-Friendly JS for Cart, Wishlist & Search -->
+  <script src="script.js"></script>
+</body>
+</html>
