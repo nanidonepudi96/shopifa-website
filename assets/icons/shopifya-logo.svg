@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="shopGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="55%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#shopGrad)"/>
+  <path d="M18 24H46L43 49H21L18 24Z" fill="#FFFFFF"/>
+  <path d="M25 24V20C25 16.1 28.1 13 32 13C35.9 13 39 16.1 39 20V24" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M27 36L31 40L38 32" stroke="#F97316" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
